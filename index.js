@@ -1,11 +1,13 @@
-// const { Person } = require("./person");
+// Importando o módulo dotenv para carregar variáveis de ambiente
+const dotenv = require("dotenv");
+// Importando a função connectDatabase responsável por conectar ao banco de dados
+const connectDatabase = require("./src/database/connect");
 
-// const person = new Person("santiago");
+// Carregando as variáveis de ambiente a partir do arquivo .env
+dotenv.config();
 
-// console.log(person.sayMyName());
+// Conectando ao banco de dados
+connectDatabase();
 
-// require("./modules/path");
-
-// require("./modules/fs");
-
-require("./modules/http");
+// Importando e executando o módulo Express
+require("./modules/express");

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-// // Criar uma pasta
+// Criar uma pasta
 // fs.mkdir(path.join(__dirname, "/test"), (error) => {
 //   if (error) {
 //     return console.log("Erro: ", error);
@@ -21,7 +21,7 @@ fs.writeFile(
 
     console.log("Arquivo criado com sucesso!");
 
-    // Adicionar à um arquivo
+    // Adicionar conteúdo a um arquivo existente
     fs.appendFile(
       path.join(__dirname, "/test", "test.txt"),
       "hello world!",
@@ -34,7 +34,7 @@ fs.writeFile(
       }
     );
 
-    // Ler arquivo
+    // Ler o conteúdo de um arquivo
     fs.readFile(
       path.join(__dirname, "/test", "test.txt"),
       "utf8",
